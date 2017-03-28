@@ -1,0 +1,19 @@
+apply plugin: "java"
+
+sourceCompatibility = 1.6
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceSets.main.java.srcDirs = [ "src/" ]
+
+
+eclipse.project {
+    name = appName + "-core"
+}
+
+dependencies {
+    compile 'com.github.czyzby:gdx-autumn:1.8.1.9.4'
+    compile 'com.github.czyzby:gdx-autumn-mvc:1.8.1.9.4'
+    compile "com.github.czyzby:gdx-autumn-gwt:1.8.1.9.4"
+    compile 'com.github.czyzby:gdx-autumn-android:1.8.1.9.4'
+    compile 'com.github.czyzby:gdx-lml-vis:1.8.1.9.4'
+}
